@@ -1,7 +1,12 @@
-document.getElementById('magicButton').addEventListener('click', function() {
-    const dynamicText = document.getElementById('dynamicText');
-    dynamicText.innerText = 'Wow! The text has changed!';
-    dynamicText.style.color = '#ff6b6b';
-    dynamicText.style.fontSize = '24px';
-    dynamicText.style.transition = 'all 0.5s';
-});
+function createRaindrop() {
+    const raindrop = document.createElement('div');
+    raindrop.classList.add('raindrop');
+    raindrop.style.left = `${Math.random() * window.innerWidth}px`;
+    document.querySelector('.sky').appendChild(raindrop);
+
+    setTimeout(() => {
+        raindrop.remove();
+    }, 2000); // 빗방울이 사라지는 시간
+}
+
+setInterval(createRaindrop, 100); // 빗방울 생성 간격
