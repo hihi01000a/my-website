@@ -1,4 +1,3 @@
-
 function createRaindrop() {
     const raindrop = document.createElement('div');
     raindrop.classList.add('raindrop');
