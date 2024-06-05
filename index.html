@@ -3,34 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01000 site</title>
+    <title>네이버 클론</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">01000 site</div>
-        <div class="search-box">
-            <form action="https://www.google.com/search" method="get" target="_blank">
-                <label for="google-search">구글 검색창</label>
-                <input type="text" id="google-search" name="q" placeholder="구글 검색창">
+    <header>
+        <h1>네이버 클론</h1>
+        <nav>
+            <ul>
+                <li><a href="#">메일</a></li>
+                <li><a href="#">카페</a></li>
+                <li><a href="#">블로그</a></li>
+                <li><a href="#">지식iN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="search">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="검색어를 입력하세요">
                 <button type="submit">검색</button>
             </form>
-        </div>
-        <div class="youtube-section">
-            <div class="search-box">
-                <form action="https://www.youtube.com/results" method="get" target="_blank">
-                    <label for="youtube-search">유튜브 검색창</label>
-                    <input type="text" id="youtube-search" name="search_query" placeholder="유튜브 검색창">
-                    <button type="submit">검색</button>
-                </form>
-            </div>
-            <div class="video-thumbnails">
-                <iframe width="30%" height="100" src="https://www.youtube.com/embed/MN1g0490WAg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div>Thumbnail 2</div>
-                <div>Thumbnail 3</div>
-            </div>
-        </div>
-    </div>
+        </section>
+        <section class="content">
+            <div id="result"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
-
