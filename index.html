@@ -10,16 +10,22 @@
     <div class="container">
         <div class="header">01000 site</div>
         <div class="search-box">
-            <label for="google-search">구글 검색창</label>
-            <input type="text" id="google-search" placeholder="구글 검색창">
+            <form action="https://www.google.com/search" method="get" target="_blank">
+                <label for="google-search">구글 검색창</label>
+                <input type="text" id="google-search" name="q" placeholder="구글 검색창">
+                <button type="submit">검색</button>
+            </form>
         </div>
         <div class="youtube-section">
             <div class="search-box">
-                <label for="youtube-search">유튜브 검색창</label>
-                <input type="text" id="youtube-search" placeholder="유튜브 검색창">
+                <form action="https://www.youtube.com/results" method="get" target="_blank">
+                    <label for="youtube-search">유튜브 검색창</label>
+                    <input type="text" id="youtube-search" name="search_query" placeholder="유튜브 검색창">
+                    <button type="submit">검색</button>
+                </form>
             </div>
             <div class="video-thumbnails">
-                <div>Thumbnail 1</div>
+                <iframe width="30%" height="100" src="https://www.youtube.com/embed/MN1g0490WAg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div>Thumbnail 2</div>
                 <div>Thumbnail 3</div>
             </div>
@@ -27,3 +33,4 @@
     </div>
 </body>
 </html>
+
